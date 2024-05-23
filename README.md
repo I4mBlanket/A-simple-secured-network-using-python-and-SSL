@@ -4,9 +4,9 @@ How to set it up:
 -----------------
 You will need to install the following:
 --------------------------------------
-pkg update
-pkg upgrade
-pkg install python openssl
+1.pkg update
+2.pkg upgrade
+3.pkg install python openssl
 
 And then you will need to use thr following command to create the cert.pem and the key.pem files:
 -------------------------------
