@@ -1,5 +1,35 @@
 # A-simple-secured-network-using-python-and-SSL
 
+How to set it up:
+You will need to install the following:
+pkg update
+pkg upgrade
+pkg install python openssl
+
+And then you will need to use thr following command to create the cert.pem and the key.pem files:
+openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes
+
+And then type:
+pip install certifi
+
+Run the server script:
+python secure_server.py
+
+In another Termux session, run the client script:
+python secure_client.py
+
+Additional Tips:
+----------------
+File Paths:
+Ensure the file paths for cert.pem and key.pem are correct. If these files are in your home directory, use the full path (/data/data/com.termux/files/home/cert.pem).
+
+Permissions:
+Ensure you have the necessary permissions to access the certificate and key files. You can try chmod +x *
+
+Networking: Make sure Termux has the necessary permissions to use network sockets. Termux may have restrictions based on Android version and security settings. If you encounter any specific errors, you can google it :)
+
+<><><><><><><><><><><><><><><><><><><>
+
 Detailed Description:
 ---------------------
 
